@@ -15,7 +15,7 @@ function styles() {
             .pipe(gulpSass({
                 outputStyle: 'compressed'
             }))
-            .pipe(postcss([autoprefixer(), cssnano()]))
+
             
             .on("error", gulpSass.logError)
             .pipe(sourcemaps.write())
