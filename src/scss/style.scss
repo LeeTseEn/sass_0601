@@ -15,3 +15,25 @@ html {
     }
   }
 }
+
+$white:#fff;
+$dark:#37424C;
+$darkGray:#37424C;
+
+$textSize: 1rem;
+
+@mixin textColor($fontSize,$color){
+    font-size : $fontSize;
+    color : $color;
+    @if $color == $dark{
+        text-align: center;
+    }
+}
+
+div{
+    @include textColor($textSize,$white )
+}
+
+/**div{
+    @include textColor($textSize,$dark )
+}
