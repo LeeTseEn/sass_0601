@@ -36,4 +36,41 @@ div{
 
 /**div{
     @include textColor($textSize,$dark )
+}**/
+
+$fontClass: "serif";
+$fontClass2: "sans-serif";
+$fontClass3: "cursive";
+$value: 1+$fontClass,1+$fontClass2,1+$fontClass3;
+$colorTheme: hsl(20%, 100%, 50%);
+$marginTheme: 2rem + 4rem auto;
+
+@mixin test($margin,$color){
+  margin: $margin;
+  color: $color;
+}
+
+@mixin test_2($margin,$color){
+  &:after{
+    content: "#{$value}";
+    margin: $margin;
+    color: $color;
+  }
+}
+
+p {
+  @include test_2($marginTheme,$colorTheme)
+}
+
+h1{
+  font-size: 10rem;
+}
+
+b{
+  @extend h1;
+}
+
+span{
+  @extend h1;
+  font-size:2rem 
 }
