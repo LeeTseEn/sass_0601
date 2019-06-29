@@ -75,9 +75,10 @@ span{
   font-size:2rem 
 }
 
-.0629 p{
-  display: block;
+p{
   float: left;
+  width: 33%;
+  
 }
 
 $holidayObj:['xmas','new_year','halloween'];
@@ -86,4 +87,13 @@ $holidayObj:['xmas','new_year','halloween'];
   .#{$holiday}{
     background:url('../img/#{$holiday}.jpg');
   }
+}
+  
+@function setPaddin($top,$bottom,$left,$right){
+  $conbine: #{$top * 2rem + ' ' + $bottom * 1rem + ' ' + $left * 2rem + ' ' + $right * 1rem};
+  @return $conbine;
+}
+
+div {
+  padding: setPaddin(2,5,6,1);
 }
