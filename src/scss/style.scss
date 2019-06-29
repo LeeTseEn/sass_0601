@@ -74,3 +74,16 @@ span{
   @extend h1;
   font-size:2rem 
 }
+
+.0629 p{
+  display: block;
+  float: left;
+}
+
+$holidayObj:['xmas','new_year','halloween'];
+
+@each $holiday in $holidayObj{
+  .#{$holiday}{
+    background:url('../img/#{$holiday}.jpg');
+  }
+}
