@@ -1,5 +1,7 @@
 @import "_reset.scss";
 @import "_commonStyle.scss";
+@import "_flexbox.scss";
+// @import "_dataAttribute.scss";
 
 html {
   touch-action: manipulation;
@@ -8,8 +10,12 @@ html {
     font-family: "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     touch-action: manipulation;
     overflow-x: hidden;
-    font-size: 3em;
-    background: #000;
+    font-size: 1em;
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     h1 {
       color: #fff;
     }
@@ -22,78 +28,195 @@ $darkGray:#37424C;
 
 $textSize: 1rem;
 
-@mixin textColor($fontSize,$color){
-    font-size : $fontSize;
-    color : $color;
-    @if $color == $dark{
-        text-align: center;
+// @mixin textColor($fontSize,$color){
+//     font-size : $fontSize;
+//     color : $color;
+//     @if $color == $dark{
+//         text-align: center;
+//     }
+// }
+
+// div{
+//     @include textColor($textSize,$white )
+// }
+
+// div{
+//     @include textColor($textSize,$dark )
+// }
+
+// $fontClass: "serif";
+// $fontClass2: "sans-serif";
+// $fontClass3: "cursive";
+// $value: 1+$fontClass,1+$fontClass2,1+$fontClass3;
+// $colorTheme: hsl(20%, 100%, 50%);
+// $marginTheme: 2rem + 4rem auto;
+
+// @mixin test($margin,$color){
+//   margin: $margin;
+//   color: $color;
+// }
+
+// @mixin test_2($margin,$color){
+//   &:after{
+//     content: "#{$value}";
+//     margin: $margin;
+//     color: $color;
+//   }
+// }
+
+// p {
+//   @include test_2($marginTheme,$colorTheme)
+// }
+
+// h1{
+//   font-size: 10rem;
+// }
+
+// b{
+//   @extend h1;
+// }
+
+// span{
+//   @extend h1;
+//   font-size:2rem 
+// }
+
+// p{
+//   float: left;
+//   width: 33%;
+  
+// }
+
+// $holidayObj:['xmas','new_year','halloween'];
+
+// @each $holiday in $holidayObj{
+//   .#{$holiday}{
+//     background:url('../img/#{$holiday}.jpg');
+//   }
+// }
+  
+// @function setPaddin($top,$bottom,$left,$right){
+//   $conbine: #{$top * 2rem + ' ' + $bottom * 1rem + ' ' + $left * 2rem + ' ' + $right * 1rem};
+//   @return $conbine;
+// }
+
+// div {
+//   padding: setPaddin(2,5,6,1);
+// }
+
+// .container{
+//   background: #efefef;
+//   span{
+//     @include boxSizing;
+//     padding: 0.5rem;
+//     height: 10vh;
+//     &:before{
+//       content: "";
+//       display: block;
+//       width: 100%;
+//       height: 100%;
+//       background-color:#333; 
+//     }
+//   }
+// }
+
+.header{
+	position: absolute;
+  width: 100%;
+  height: 100px;
+}
+
+.user{
+  position: relative;
+  float: left;	
+  width: 288px;
+  height: 64px;
+  background: url(../img/user_status_bg.png) no-repeat;
+  background-size: 100% 100%;
+  p{
+    position: relative;
+    float: left;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.8rem;
+    &:after{
+      content: "Lv999";
+      position: relative;
+      display: block;
+      margin-top: 8px;  
+      padding:4px; 
+      width: 100px;
+      color: #000;
+      background: yellow;
+      border-radius:10px; 
     }
-}
-
-div{
-    @include textColor($textSize,$white )
-}
-
-/**div{
-    @include textColor($textSize,$dark )
-}**/
-
-$fontClass: "serif";
-$fontClass2: "sans-serif";
-$fontClass3: "cursive";
-$value: 1+$fontClass,1+$fontClass2,1+$fontClass3;
-$colorTheme: hsl(20%, 100%, 50%);
-$marginTheme: 2rem + 4rem auto;
-
-@mixin test($margin,$color){
-  margin: $margin;
-  color: $color;
-}
-
-@mixin test_2($margin,$color){
-  &:after{
-    content: "#{$value}";
-    margin: $margin;
-    color: $color;
+  }
+  span{
+    position: relative;
+    float: left;
+    margin:20px 0 0 6px; 
+    color: #fff;
   }
 }
 
-p {
-  @include test_2($marginTheme,$colorTheme)
-}
-
-h1{
-  font-size: 10rem;
-}
-
-b{
-  @extend h1;
-}
-
-span{
-  @extend h1;
-  font-size:2rem 
-}
-
-p{
+.userIcon{
+  position: relative;
   float: left;
-  width: 33%;
-  
+  padding: 5px;
 }
 
-$holidayObj:['xmas','new_year','halloween'];
+.star{
+  position: relative;
+  float: left;
+  margin-top:12px; 
+}
 
-@each $holiday in $holidayObj{
-  .#{$holiday}{
-    background:url('../img/#{$holiday}.jpg');
+.coin{
+  position: relative;
+  float: left; 
+  margin: 10px 0 0 48px;
+  img{
+    position: relative;
+    float: left;
+    left: 10px;
+    z-index: 10;
+  }
+  p{
+    position: relative;
+    float: right;
+    margin-top: 4px;
+    padding: 4px 16px 4px 46px;
+    color: #fff;
+    background: linear-gradient(270deg, rgba(0, 0, 160, 1)35%, rgba(0, 0, 113, 0.8)60%); 
+    background: -moz-linear-gradient(270deg, rgba(0, 0, 160, 1)35%, rgba(0, 0, 113, 0.8)60%); 
+    background: -webkit-linear-gradient(270deg, rgba(0, 0, 160, 1)35%, rgba(0, 0, 113, 0.8)60%); 
+    background: -o-linear-gradient(270deg, rgba(0, 0, 160, 1)35%, rgba(0, 0, 113, 0.8)60%); 
+    border:#37424C 1px solid; 
+    border-radius: 10px;
   }
 }
-  
-@function setPaddin($top,$bottom,$left,$right){
-  $conbine: #{$top * 2rem + ' ' + $bottom * 1rem + ' ' + $left * 2rem + ' ' + $right * 1rem};
-  @return $conbine;
+
+
+$top_menuObj:['top_menu_01','top_menu_02','top_menu_03','top_menu_04','top_menu_05'];
+
+@each $top_menu in $top_menuObj{
+  .#{$top_menu}{
+    background:url('../img/#{$top_menu}.png');
+  }
 }
 
-div {
-  padding: setPaddin(2,5,6,1);
+.topMenu{
+  position: relative;
+  float: right;
+  width: 500px;
+  height: 100px;
+}
+
+.top_menu_01,.top_menu_02,.top_menu_03,.top_menu_04,.top_menu_05{
+  position: relative;
+  float: left;
+  margin: 5px 10px;
+  width: 80px;
+  height: 90px;
+  background-size: 100% 100%;
 }
