@@ -161,6 +161,21 @@ $fontSize_mini: 0.65em;
 }
 
 /* media query */
+$ipad: "screen and (max-width:1024px) and (or ientation: landscape) and (-webkit-max-device-pixel-ratio: 2) and (max-resolution: 192dpi)";
+$iphoneX: "screen and (max-width:812px) and (max-height:375px) and (-webkit-max-device-pixel-ratio: 3) and (max-resolution: 458dpi)";
+
+@mixin ipad{
+  @media #{$ipad}{
+    @content;
+  }
+}
+
+@mixin iphoneX{
+  @media #{$iphoneX}{
+    @content;
+  }
+}
+
 @mixin xl {
     @media all and (max-width: 1100px) {
         @content;
