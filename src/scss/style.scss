@@ -323,7 +323,7 @@ $daily_questObj: [ "fish_1", "fish_2", "fish_3", "treasurebox" ];
 
 .game{
   float: right;
-  width: 70vw;
+  width: 74vw;
   margin-top: 2%;
 }
 
@@ -336,6 +336,11 @@ $gmaeObj: [ "game01", "game02", "game03"];
     background-size: 100% 100%;
     float: left;
   }
+}
+
+.game01{
+  position: relative;
+  left: 26px;
 }
 
 .footer{
