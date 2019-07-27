@@ -13,11 +13,11 @@ html {
     touch-action: manipulation;
     overflow-x: hidden;
     font-size: 1em;
-    background: url(../img/bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // background: url(../img/bg.jpg) no-repeat center center fixed;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
     h1 {
       color: #fff;
     }
@@ -122,249 +122,360 @@ $textSize: 1rem;
 // }
 // }
 
-.header {
-  position: relative;
-  width: 100%;
+// .header {
+//   position: relative;
+//   width: 100%;
+// }
+
+// .user {
+//   position: relative;
+//   float: left;
+//   width: 220px;
+//   height: 54px;
+//   background: url(../img/user_status_bg.png) no-repeat;
+//   background-size: 100% 100%;
+//   p {
+//     position: relative;
+//     float: left;
+//     color: #fff;
+//     padding-top: 8px;
+//     font-size: 0.6rem;
+//     &:after {
+//       content: "Lv999";
+//       position: relative;
+//       display: block;
+//       margin-top: 4px;
+//       padding: 2px;
+//       width: 88px;
+//       font-size: 0.6rem;
+//       color: #000;
+//       background: yellow;
+//       border-radius: 10px;
+//     }
+//   }
+//   span {
+//     position: relative;
+//     float: left;
+//     margin: 16px 0 0 2px;
+//     font-size: 0.6rem;
+//     color: #fff;
+//   }
+// }
+
+// .userIcon {
+//   position: relative;
+//   float: left;
+//   padding: 5px;
+// }
+
+// .star {
+//   position: relative;
+//   float: left;
+//   margin-top: 12px;
+//   margin-left: 8px;
+// }
+
+// .coin {
+//   position: relative;
+//   float: left;
+//   margin: 10px 0 0 14px;
+//   img {
+//     position: relative;
+//     float: left;
+//     left: 10px;
+//     z-index: 10;
+//   }
+//   p {
+//     position: relative;
+//     float: right;
+//     margin-top: 4px;
+//     padding: 4px 16px 4px 46px;
+//     color: #fff;
+//     background: linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
+//     background: -moz-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
+//     background: -webkit-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
+//     background: -o-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
+//     border: #37424c 1px solid;
+//     border-radius: 10px;
+//   }
+// }
+
+// .topMenu {
+//   position: relative;
+//   float: right;
+//   width: 500px;
+//   height: 100px;
+// }
+
+// $top_menuWidth: 80px;
+// $top_menuHeight: 90px;
+
+// @mixin WH($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+// @function setMargin($topBottom, $leftRight) {
+//   $conbine: #{$topBottom * 1rem + " " + $leftRight * 1rem};
+//   @return $conbine;
+// }
+
+// $top_menuObj: [ "top_menu_01", "top_menu_02", "top_menu_03", "top_menu_04", "top_menu_05" ];
+
+// @each $top_menu in $top_menuObj {
+//   .#{$top_menu} {
+//     background: url("../img/#{$top_menu}.png") no-repeat;
+//     margin: setMargin(0.5, 0.5);
+//     @include WH($top_menuWidth, $top_menuHeight);
+//     background-size: 100% 100%;
+//     float: left;
+//   }
+// }
+
+// .dailyQuest {
+//   img {
+//     width: 258px;
+//   }
+// }
+
+// .container {
+//   position: relative;
+//   width: 100%;
+//   height: 78vh;
+// }
+
+// .containerLeft {
+//   position: absolute;
+//   width: 244px;
+//   top: -40px;
+//   img {
+//     width: 258px;
+//   }
+// }
+
+// .daily_quest {
+//   margin-left: 8%;
+//   li {
+//     span {
+//       @include boxSizing;
+//       margin: setMargin(0.2, 0);
+//       height: 70px;
+//       font-size: 0.8rem;
+//       line-height: 70px;
+//       background: url(../img/quest_bg.png) no-repeat center center;
+//       background-size: 100% 100%;
+//     }
+//   }
+// }
+
+// $daily_questObj: [ "get_reward_btn", "lock" ];
+
+// @each $daily_quest in $daily_questObj {
+//   .#{$daily_quest} {
+//     &::before {
+//       content: "";
+//       display: block;
+//       margin: 16px 10px 0 14px;
+//       width: 34px;
+//       height: 38px;
+//       background: url("../img/#{$daily_quest}.png") no-repeat center center;
+//       background-size: 100% 100%;
+//       float: left;
+//     }
+//     @if $daily_quest == "get_reward_btn" {
+//       color: yellow;
+//       filter: drop-shadow(0px 0px 10px rgb(255, 253, 113));
+//       -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 253, 113));
+//       &::before {
+//         height: 22px;
+//         margin-top: 24px;
+//       }
+//     }
+//     @if $daily_quest == "lock" {
+//       color: #fff;
+//     }
+//   }
+// }
+
+// $daily_questObj: [ "fish_1", "fish_2", "fish_3", "treasurebox" ];
+
+// @each $daily_quest in $daily_questObj {
+//   .#{$daily_quest} {
+//     &:after {
+//       content: "";
+//       position: relative;
+//       display: table;
+//       @include WH(50px, 66px);
+//       left: 10px;
+//       background: url("../img/#{$daily_quest}.png") no-repeat center center;
+//       background-size: 100% 100%;
+//       float: right;
+//     }
+//   }
+// }
+
+// .fish_3 {
+//   &::after {
+//     @include WH(60px, 70px);
+//     top: -12px;
+//   }
+// }
+
+// .game{
+//   float: right;
+//   width: 74vw;
+//   margin-top: 2%;
+// }
+
+// $gmaeObj: [ "game01", "game02", "game03"];
+
+// @each $gmae in $gmaeObj {
+//   .#{$gmae} {
+//     background: url("../img/#{$gmae}.png") no-repeat;
+//     @include WH(23vw, 60vh);
+//     background-size: 100% 100%;
+//     float: left;
+//   }
+// }
+
+// .game01{
+//   position: relative;
+//   left: 26px;
+// }
+
+// .footer{
+//   position: relative;
+//   width: 100%;
+//   background: rgb(24, 49, 49);
+// }
+
+// .bottomMenu{
+//   margin: 3px 0;
+//   width: 55vw;
+//   height: 6vh;
+//   float: right;
+// }
+
+// $bottomMenuObj: [ "bottom_menu_01", "bottom_menu_02", "bottom_menu_03","bottom_menu_04", "bottom_menu_05", "bottom_menu_06" ];
+
+// @each $bottomMenu in $bottomMenuObj {
+//   .#{$bottomMenu} {
+//     background: url("../img/#{$bottomMenu}.png") no-repeat;
+//     background-size: 100% 100%;
+//     float: left;
+//   }
+// }
+
+// 0727 test
+
+body {
+  @include flexBox(column);
+  @include flexAlign(center, center);
+  background: $gray;
 }
 
-.user {
-  position: relative;
-  float: left;
-  width: 220px;
-  height: 54px;
-  background: url(../img/user_status_bg.png) no-repeat;
-  background-size: 100% 100%;
-  p {
-    position: relative;
-    float: left;
-    color: #fff;
-    padding-top: 8px;
-    font-size: 0.6rem;
-    &:after {
-      content: "Lv999";
-      position: relative;
-      display: block;
-      margin-top: 4px;
-      padding: 2px;
-      width: 88px;
-      font-size: 0.6rem;
-      color: #000;
-      background: yellow;
-      border-radius: 10px;
-    }
-  }
-  span {
-    position: relative;
-    float: left;
-    margin: 16px 0 0 2px;
-    font-size: 0.6rem;
-    color: #fff;
-  }
+.my-grid {
+  margin: 5% 10% 2%;
+  padding: 0.5rem 2rem;
+  width: 60vw;
+  border: 1px $dark dashed;
 }
 
-.userIcon {
-  position: relative;
-  float: left;
-  padding: 5px;
-}
+$grid-columns: 10;
 
-.star {
-  position: relative;
-  float: left;
-  margin-top: 12px;
-  margin-left: 8px;
-}
-
-.coin {
-  position: relative;
-  float: left;
-  margin: 10px 0 0 14px;
-  img {
-    position: relative;
-    float: left;
-    left: 10px;
-    z-index: 10;
-  }
-  p {
-    position: relative;
-    float: right;
-    margin-top: 4px;
-    padding: 4px 16px 4px 46px;
-    color: #fff;
-    background: linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
-    background: -moz-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
-    background: -webkit-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
-    background: -o-linear-gradient(270deg, rgba(0, 0, 160, 1) 35%, rgba(0, 0, 113, 0.8) 60%);
-    border: #37424c 1px solid;
-    border-radius: 10px;
-  }
-}
-
-.topMenu {
-  position: relative;
-  float: right;
-  width: 500px;
-  height: 100px;
-}
-
-$top_menuWidth: 80px;
-$top_menuHeight: 90px;
-
-@mixin WH($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@function setMargin($topBottom, $leftRight) {
-  $conbine: #{$topBottom * 1rem + " " + $leftRight * 1rem};
-  @return $conbine;
-}
-
-$top_menuObj: [ "top_menu_01", "top_menu_02", "top_menu_03", "top_menu_04", "top_menu_05" ];
-
-@each $top_menu in $top_menuObj {
-  .#{$top_menu} {
-    background: url("../img/#{$top_menu}.png") no-repeat;
-    margin: setMargin(0.5, 0.5);
-    @include WH($top_menuWidth, $top_menuHeight);
-    background-size: 100% 100%;
-    float: left;
-  }
-}
-
-.dailyQuest {
-  img {
-    width: 258px;
-  }
-}
-
-.container {
-  position: relative;
-  width: 100%;
-  height: 78vh;
-}
-
-.containerLeft {
-  position: absolute;
-  width: 244px;
-  top: -40px;
-  img {
-    width: 258px;
-  }
-}
-
-.daily_quest {
-  margin-left: 8%;
-  li {
-    span {
+@for $i from 1 through $grid-columns {
+  [data-row-split="#{$i}"] {
+    .data_row {
       @include boxSizing;
-      margin: setMargin(0.2, 0);
-      height: 70px;
-      font-size: 0.8rem;
-      line-height: 70px;
-      background: url(../img/quest_bg.png) no-repeat center center;
-      background-size: 100% 100%;
+      padding: #{$i * 0.1 + "rem"};
+      width: calc(100% / #{$i});
     }
   }
-}
-
-$daily_questObj: [ "get_reward_btn", "lock" ];
-
-@each $daily_quest in $daily_questObj {
-  .#{$daily_quest} {
-    &::before {
-      content: "";
-      display: block;
-      margin: 16px 10px 0 14px;
-      width: 34px;
-      height: 38px;
-      background: url("../img/#{$daily_quest}.png") no-repeat center center;
-      background-size: 100% 100%;
-      float: left;
-    }
-    @if $daily_quest == "get_reward_btn" {
-      color: yellow;
-      filter: drop-shadow(0px 0px 10px rgb(255, 253, 113));
-      -webkit-filter: drop-shadow(0px 0px 10px rgb(255, 253, 113));
-      &::before {
-        height: 22px;
-        margin-top: 24px;
+  .nb-#{$i} {
+    &::after {
+      @include flexBox(row);
+      @include flexAlign(center, center);
+      content: "#{$i}";
+      width: 100%;
+      height: 20vh;
+      border: 1px $dark solid;
+      border-radius: 20px;
+      font-size: 3rem;
+      @if "#{$i}"=="3" {
+        content: "OG";
+        color: $white;
+        background: $red;
       }
     }
-    @if $daily_quest == "lock" {
-      color: #fff;
-    }
   }
 }
 
-$daily_questObj: [ "fish_1", "fish_2", "fish_3", "treasurebox" ];
-
-@each $daily_quest in $daily_questObj {
-  .#{$daily_quest} {
-    &:after {
-      content: "";
-      position: relative;
-      display: table;
-      @include WH(50px, 66px);
-      left: 10px;
-      background: url("../img/#{$daily_quest}.png") no-repeat center center;
-      background-size: 100% 100%;
-      float: right;
-    }
-  }
+.icon-sets {
+  width: 25%;
 }
 
-.fish_3 {
-  &::after {
-    @include WH(60px, 70px);
-    top: -12px;
-  }
-}
+$iconSetsObj: [ "home", "edit", "detail", "coin", "icon_arrow_up"  ];
 
-.game{
-  float: right;
-  width: 74vw;
-  margin-top: 2%;
-}
-
-$gmaeObj: [ "game01", "game02", "game03"];
-
-@each $gmae in $gmaeObj {
-  .#{$gmae} {
-    background: url("../img/#{$gmae}.png") no-repeat;
-    @include WH(23vw, 60vh);
+@each $iconSets in $iconSetsObj {
+  .#{$iconSets} {
+    height: 5vh;
+    background: url("../img/#{$iconSets}.svg") no-repeat;
     background-size: 100% 100%;
-    float: left;
   }
 }
 
-.game01{
-  position: relative;
-  left: 26px;
-}
+// 考題解答
 
-.footer{
-  position: relative;
-  width: 100%;
-  background: rgb(24, 49, 49);
-}
-
-.bottomMenu{
-  margin: 3px 0;
-  width: 55vw;
-  height: 6vh;
-  float: right;
-}
-
-$bottomMenuObj: [ "bottom_menu_01", "bottom_menu_02", "bottom_menu_03","bottom_menu_04", "bottom_menu_05", "bottom_menu_06" ];
-
-@each $bottomMenu in $bottomMenuObj {
-  .#{$bottomMenu} {
-    background: url("../img/#{$bottomMenu}.png") no-repeat;
-    background-size: 100% 100%;
-    float: left;
-  }
-}
-
-
+// .my-grid{
+//   @include flexBox(row);
+//   @include flexAlign(center, center);
+//   @include boxSizing;
+//   flex-wrap: wrap;
+//   width: 1000px;
+//   margin: auto;
+//   padding: 1rem;
+//   border: 1px dashed #333;
   
+//   .grid{
+//     @include flexBox(row);
+//     @include flexAlign(center, center);
+//     @include boxSizing;
+//     min-height: 100px;
+//     height: 100%;
+//     .content{
+//       @include flexBox(row);
+//       @include flexAlign(center, center);
+//       border-radius: 12px;
+//       border: 1px solid #333;
+//       width: 100px;
+//       height: 100px;
+//       margin: 0.5rem;
+//     }
+//   }
+  
+//   @for $i from 1 through 24{
+//     &[data-row-split="#{$i}"]{
+//       .grid{
+//         width: calc(100% / #{$i});
+//         @for $i from 1 through 24{
+//           &:nth-child(#{$i}){
+//             .content{
+//               @if $i == 3 {
+//                 background-color: red;
+//                 color: #fff;
+//               }
+//               &:before{
+//                 content: "#{$i}";
+//                 @if $i == 3 {
+//                   content: "OG";
+//                 }
+//               }
+//             }
+//           }
+//         } 
+//       }
+//     }
+//   }
+  
+  
+// }
